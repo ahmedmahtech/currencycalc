@@ -26,20 +26,70 @@ class _HomePageState extends State<HomePage> {
   RxDouble selectedPrice =3.55.obs;
 
   void changeSelected(bool isFrom, String currency) {
+    if(selectedFrom.value=='USD'&&selectedTo.value=='NIS'){
+      selectedPrice.value=3.55;
+    }
+    else     if(selectedFrom.value=='USD'&&selectedTo.value=='USD'){
+      selectedPrice.value=1.00;
+    }   else     if(selectedFrom.value=='USD'&&selectedTo.value=='JD'){
+      selectedPrice.value=0.70;
+    }   else     if(selectedFrom.value=='USD'&&selectedTo.value=='EUR'){
+      selectedPrice.value=0.98;
+    }
+
+    else  if(selectedFrom.value=='NIS'&&selectedTo.value=='NIS'){
+      selectedPrice.value=3.55;
+    }
+    else     if(selectedFrom.value=='NIS'&&selectedTo.value=='USD'){
+      selectedPrice.value=1.00;
+    }   else     if(selectedFrom.value=='NIS'&&selectedTo.value=='JD'){
+      selectedPrice.value=0.70;
+    }   else     if(selectedFrom.value=='NIS'&&selectedTo.value=='EUR'){
+      selectedPrice.value=0.98;
+    }
+
+
+
+    else   if(selectedFrom.value=='JD'&&selectedTo.value=='NIS'){
+      selectedPrice.value=4.90;
+    }
+    else     if(selectedFrom.value=='JD'&&selectedTo.value=='USD'){
+      selectedPrice.value=1.41;
+    }   else     if(selectedFrom.value=='JD'&&selectedTo.value=='JD'){
+      selectedPrice.value=1.0;
+    }   else     if(selectedFrom.value=='JD'&&selectedTo.value=='EUR'){
+      selectedPrice.value=1.39;
+    }
+
+
+    else    if(selectedFrom.value=='EUR'&&selectedTo.value=='NIS'){
+      selectedPrice.value=3.53;
+    }
+    else     if(selectedFrom.value=='EUR'&&selectedTo.value=='USD'){
+      selectedPrice.value=1.01;
+    }   else     if(selectedFrom.value=='EUR'&&selectedTo.value=='JD'){
+      selectedPrice.value=0.72;
+    }   else     if(selectedFrom.value=='EUR'&&selectedTo.value=='EUR'){
+      selectedPrice.value=1.0;
+    }
+
+
+
     if (isFrom && selectedFrom.value != currency) {
 
       selectedFrom.value = currency;
 
-      if(selectedFrom.value=='USD'&&selectedTo.value=='NIS'){
-        selectedPrice.value=3.55;
-      }
-      else     if(selectedFrom.value=='USD'&&selectedTo.value=='USD'){
-        selectedPrice.value=1.00;
-      }   else     if(selectedFrom.value=='USD'&&selectedTo.value=='JD'){
-        selectedPrice.value=0.70;
-      }   else     if(selectedFrom.value=='USD'&&selectedTo.value=='EUR'){
-        selectedPrice.value=0.98;
-      }
+
+      // if(selectedFrom.value=='USD'&&selectedTo.value=='NIS'){
+      //   selectedPrice.value=3.55;
+      // }
+      // else     if(selectedFrom.value=='USD'&&selectedTo.value=='USD'){
+      //   selectedPrice.value=1.00;
+      // }   else     if(selectedFrom.value=='USD'&&selectedTo.value=='JD'){
+      //   selectedPrice.value=0.70;
+      // }   else     if(selectedFrom.value=='USD'&&selectedTo.value=='EUR'){
+      //   selectedPrice.value=0.98;
+      // }
 
     } else if (!isFrom) {
       selectedTo.value = currency;
