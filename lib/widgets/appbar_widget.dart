@@ -9,7 +9,6 @@ PreferredSize appbarWidget(ThemeData themeData) {
       elevation: 0.0,
       shadowColor: Colors.transparent,
       backgroundColor: themeData.backgroundColor,
-      automaticallyImplyLeading: false,
       titleSpacing: 0,
       title: Text("Currency Convertor",style: TextStyle(color:Colors.blue,fontSize: 24 ,fontWeight: FontWeight.bold),),
       centerTitle: true,
