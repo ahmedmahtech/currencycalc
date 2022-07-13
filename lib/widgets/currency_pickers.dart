@@ -9,7 +9,6 @@ Padding currencyPickers(
     RxString selectedTo,
     Function() switchCurrencies,
     Function(bool, String) changeSelected,
-    ThemeData themeData,
     ) {
   return Padding(
     padding: EdgeInsets.symmetric(vertical: 2.0.h),
@@ -18,19 +17,19 @@ Padding currencyPickers(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          selectableList(selectedFrom.value, true, changeSelected, themeData),
+          selectableList(selectedFrom.value, true, changeSelected),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 3.w),
             child: GestureDetector(
               onTap: () => switchCurrencies(),
               child: Icon(
                 UniconsLine.exchange_alt,
-                color: themeData.secondaryHeaderColor,
+                color: Colors.blue,
                 size: 22.sp,
               ),
             ),
           ),
-          selectableList(selectedTo.value, false, changeSelected, themeData),
+          selectableList(selectedTo.value, false, changeSelected),
         ],
       ),
     ),

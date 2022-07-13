@@ -3,14 +3,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 
 Center numberButton(
-    String str, Function(String) changeValue, ThemeData themeData) {
+    String str, Function(String) changeValue) {
   return Center(
     child: GestureDetector(
       onTap: () => changeValue(str),
       child: Container(
         decoration: BoxDecoration(
           shape: BoxShape.circle,
-          color: themeData.secondaryHeaderColor,
+          color: Colors.blue,
         ),
         width: 20.w,
         child: Center(

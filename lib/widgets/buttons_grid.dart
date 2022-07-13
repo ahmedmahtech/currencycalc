@@ -6,7 +6,6 @@ import 'package:unicons/unicons.dart';
 Padding buttonsGrid(
     Function(String) changeAmmount,
     Function() backspace,
-    ThemeData themeData,
     ) {
   return Padding(
     padding: EdgeInsets.symmetric(
@@ -22,9 +21,9 @@ Padding buttonsGrid(
       itemCount: 12,
       itemBuilder: (BuildContext context, int i) {
         if (i == 9) {
-          return numberButton(',', changeAmmount, themeData);
+          return numberButton(',', changeAmmount);
         } else if (i == 10) {
-          return numberButton(0.toString(), changeAmmount, themeData);
+          return numberButton(0.toString(), changeAmmount);
         } else if (i == 11) {
           return Center(
             child: GestureDetector(
@@ -33,7 +32,7 @@ Padding buttonsGrid(
                 width: 20.w,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: themeData.secondaryHeaderColor,
+                  color:Colors.blue,
                 ),
                 child: Center(
                   child: Padding(
@@ -52,7 +51,7 @@ Padding buttonsGrid(
           return numberButton(
             (i + 1).toString(),
             changeAmmount,
-            themeData,
+
           );
         }
       },

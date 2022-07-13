@@ -8,12 +8,11 @@ Center valueCounter(
     RxString selectedFrom,
     RxString selectedTo,
     RxDouble selectedPrice,
-    ThemeData themeData,
     ) {
   return Center(
     child: Container(
       decoration: BoxDecoration(
-        color: themeData.primaryColor.withOpacity(0.05),
+        color:  Colors.black.withOpacity(0.05),
         borderRadius:  BorderRadius.circular(10.0),
       ),
       child: Padding(
@@ -24,7 +23,7 @@ Center valueCounter(
                 ? '0,00 $selectedFrom = 0,00 $selectedTo'
                 : '${(double.parse(ammount.value.replaceAll(',', '.')).toStringAsFixed(2)).replaceAll('.', ',')} $selectedFrom = ${(double.parse(ammount.value.replaceAll(',', '.')) * selectedPrice.value).toStringAsFixed(2).replaceAll('.', ',')} $selectedTo',
             style: GoogleFonts.lato(
-              color: themeData.primaryColor,
+              color:  Colors.black,
               fontWeight: FontWeight.bold,
               fontSize: 17.sp,
             ),

@@ -6,19 +6,17 @@ List<String> currencies = [
   "NIS",
   "JD",
   "EUR",
-
-
 ];
 Center selectableList(String value, bool isFrom,
-    Function(bool, String) changeCurr, ThemeData themeData) {
+    Function(bool, String) changeCurr) {
   return Center(
     child: Container(
       padding: EdgeInsets.symmetric(horizontal: 3.w),
       decoration: BoxDecoration(
         borderRadius:  BorderRadius.circular(10.0),
-        color: themeData.backgroundColor,
+        color:  Color(0xfff8f8f8),
         border: Border.all(
-          color: themeData.primaryColor,
+          color: Colors.black,
         ),
       ),
       width: 35.w,
@@ -28,9 +26,9 @@ Center selectableList(String value, bool isFrom,
             'Select',
           ),
           menuMaxHeight: 40.h,
-          dropdownColor: themeData.backgroundColor,
+          dropdownColor:  Color(0xfff8f8f8),
           borderRadius: BorderRadius.circular(10),
-          style: GoogleFonts.poppins(color: themeData.primaryColor),
+          style: GoogleFonts.poppins(color: Colors.black),
           value: value,
           items: currencies.map(
                 (String item) {
@@ -39,7 +37,7 @@ Center selectableList(String value, bool isFrom,
                 child: Text(
                   item,
                   style: GoogleFonts.lato(
-                    color: themeData.primaryColor,
+                    color: Colors.black,
                     fontSize: 12.sp,
                   ),
                 ),

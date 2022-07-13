@@ -119,14 +119,13 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    ThemeData themeData = Theme.of(context);
     return Scaffold(
-      backgroundColor: themeData.backgroundColor,
+      backgroundColor: Color(0xfff8f8f8),
       appBar:AppBar(
         bottomOpacity: 0.0,
         elevation: 0.0,
         shadowColor: Colors.transparent,
-        backgroundColor: themeData.backgroundColor,
+        backgroundColor: Color(0xfff8f8f8),
         titleSpacing: 0,
         title:const Text.rich(TextSpan(
             text: 'Currency ',
@@ -143,9 +142,9 @@ class _HomePageState extends State<HomePage> {
       ),
       body: ListView(
           children: [
-            currencyPickers(selectedFrom, selectedTo, switchCurrencies,changeSelected, themeData),
-            valueCounter( ammount, selectedFrom, selectedTo, selectedPrice, themeData),
-            buttonsGrid(changeAmmount, backspace, themeData),
+            currencyPickers(selectedFrom, selectedTo, switchCurrencies,changeSelected),
+            valueCounter( ammount, selectedFrom, selectedTo, selectedPrice),
+            buttonsGrid(changeAmmount, backspace),
           ],
         ),
     );
