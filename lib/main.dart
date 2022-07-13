@@ -18,9 +18,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Sizer(builder: (context, orientation, deviceType) {
-      return GetMaterialApp(
-        defaultTransition: Transition.rightToLeft,
-        transitionDuration: const Duration(milliseconds: 500),
+      return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Currency Convertor',
         home: const HomePage(),
